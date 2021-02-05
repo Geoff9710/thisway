@@ -1,0 +1,18 @@
+# This is a workflow that creates a changelog for audit purposes
+
+name: PR Changelog Add
+  on:
+    pull_request:
+      types:
+      - opened
+      - edited
+      - synchronized
+      - labeled
+      - unlabeled
+jobs:
+  check_pr_size:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: guzzler/file-changelog-issue-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }]
