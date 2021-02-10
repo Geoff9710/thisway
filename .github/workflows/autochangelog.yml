@@ -1,14 +1,13 @@
 # This is a workflow that creates a changelog for audit purposes
 
 name: PR Changelog Add
-  on:
-    pull_request:
-      types:
-      - opened
-      - edited
-      - synchronized
-      - labeled
-      - unlabeled
+  pull_request:
+    types:
+    - opened
+    - edited
+    - synchronized
+    - labeled
+    - unlabeled
 jobs:
   check_pr_size:
     runs-on: ubuntu-latest
