@@ -1,0 +1,14 @@
+name: Listcontent
+on: [pull_request]
+
+jobs:
+  label:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Content list
+        uses: enricomarino/actions@v2
+        with:
+        # The folder to inspect
+            source: # default is /
+  
